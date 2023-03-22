@@ -1,0 +1,13 @@
+python-dateutil
+easydict
+pandas
+torchfile
+nltk
+pillow
+scikit-image
+pyyaml
+tqdm
+pytorch-fid
+lpips
+transformers
+gan-lab

@@ -1,0 +1,32 @@
+CONFIG_NAME: 'bird_sloss01'
+
+DATASET_NAME: 'birds'
+DATA_DIR: 'data/birds'
+GPU_ID: 0
+WORKERS: 1
+
+
+B_VALIDATION: False # Alder changed, was True
+RESTORE: False
+loss: 'hinge'
+
+TREE:
+    BRANCH_NUM: 1
+    BASE_SIZE: 256
+
+
+TRAIN:
+    NF: 64 # default 64
+    BATCH_SIZE: 6 # was 24
+    MAX_EPOCH: 6 # was 600
+    NET_G: 'tmp/bird_sloss01/64/models/netG_006.pth' #'C:/Users/Alder/Desktop/HungryAI/SSAGAN_models/finetune/cub/netG_550.pth' # Alder changed from ''
+    WARMUP_EPOCHS: 1 # was 100 
+    GSAVE_INTERVAL: 1 # was 10
+    DSAVE_INTERVAL: 1 # was 10
+
+
+TEXT:
+    EMBEDDING_DIM: 256
+    CAPTIONS_PER_IMAGE: 10
+    DAMSM_NAME: 'DAMSMencoders/bird/text_encoder200.pth'
+
